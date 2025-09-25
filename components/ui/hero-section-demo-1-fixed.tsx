@@ -111,8 +111,8 @@ export default function HeroSectionOne() {
       <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
       </div>
-      <div className="w-full px-4 py-20 md:py-28">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+      <div className="w-full px-6 py-20 sm:px-8 md:py-28">
+        <h1 className="relative z-10 mx-auto max-w-4xl px-4 text-center text-2xl font-bold text-slate-700 sm:px-6 md:px-0 md:text-4xl lg:text-7xl dark:text-slate-300">
           {"Smarter Panchakarma, Better Patient Care"
             .split(" ")
             .map((word, index) => (
@@ -142,7 +142,7 @@ export default function HeroSectionOne() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto max-w-xl px-4 py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400 sm:px-6 md:px-0"
         >
           Automate therapy scheduling, ensure consistent care, and simplify patient management -trusted by Ayurveda centers worldwide.
         </motion.p>
