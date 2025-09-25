@@ -1,5 +1,5 @@
-import HeroSectionOne from "@/components/ui/hero-section-demo-1";
-import { WaitlistSection } from "@/components/ui/waitlist-section";
+import HeroSectionOne from "@/components/ui/hero-section-demo-1-fixed";
+import WaitlistSection from "@/components/ui/waitlist-section";
 import { Footer } from "@/components/ui/footer";
 
 export default function Home() {

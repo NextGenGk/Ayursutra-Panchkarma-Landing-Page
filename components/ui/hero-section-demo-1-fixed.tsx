@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +24,9 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="/" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+                <Link href="/" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                   Home
-                </a>
+                </Link>
                 <a href="#faq" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                   FAQ
                 </a>
@@ -182,13 +184,12 @@ export default function HeroSectionOne() {
             y: 0,
           }}
           transition={{
-            duration: 0.3,
             delay: 1.2,
           }}
           className="relative z-10 mt-24 w-full max-w-7xl mx-auto rounded-[1.75rem] border-2 border-neutral-200 bg-neutral-100 p-6 shadow-2xl dark:border-neutral-800 dark:bg-neutral-900"
         >
           <div className="w-full overflow-hidden rounded-2xl border-[3px] border-gray-300 dark:border-gray-700">
-            <img
+            <Image
               src="/patient-home-page-01.webp"
               alt="Landing page preview"
               className="aspect-[16/9] h-auto w-full object-cover"
