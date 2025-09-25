@@ -71,20 +71,20 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
-            <a 
+            <Link 
               href="/" 
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="#faq" 
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
-            </a>
+            </Link>
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform"
               target="_blank"

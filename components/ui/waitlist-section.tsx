@@ -41,7 +41,7 @@ const WaitlistSection = () => {
           Join the Waitlist
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg text-neutral-400">
-          Thank you for your amazing interest in AyurSutra! We're seeing unprecedented demand. Join our waitlist and we'll notify you as soon as access is available.
+          Thank you for your amazing interest in AyurSutra! We&apos;re seeing unprecedented demand. Join our waitlist and we&apos;ll notify you as soon as access is available.
         </p>
         
         <div className="mt-8">
