@@ -113,7 +113,7 @@ export default function HeroSectionOne() {
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
         <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-4xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
-          {"AyurSutra Primary Research Survey"
+          {"AyurSutra- Panchakarma Patient Management, Therapy Scheduling, and AI-Driven Diet System Software"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -190,8 +190,8 @@ export default function HeroSectionOne() {
         >
           <div className="w-full overflow-hidden rounded-lg sm:rounded-2xl border-2 sm:border-[3px] border-gray-300 dark:border-gray-700">
             <Image
-              src="/patient.png"
-              alt="Patient dashboard preview"
+              src="/patient-home-page-01.webp"
+              alt="AyurSutra patient dashboard preview"
               className="aspect-[16/9] h-auto w-full object-cover"
               height={800}
               width={1422}
