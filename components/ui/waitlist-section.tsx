@@ -89,7 +89,7 @@ const WaitlistSection = () => {
   return (
     <div className="relative w-full overflow-hidden bg-background py-20">
       <div className="mx-auto max-w-2xl px-6 text-center sm:px-8">
-        <h2 className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl">
+        <h2 className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
           Join the Waitlist
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg text-foreground/80">
