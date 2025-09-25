@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ayursutra Panchkarma Landing Page 🌐
+<img width="1326" height="828" alt="download (1)" src="https://github.com/user-attachments/assets/b1e9c5e7-c249-4948-840f-cb8c5232d85d" />
 
-## Getting Started
+A modern landing page built with Next.js and TypeScript, showcasing the benefits of Ayursutra Panchkarma treatments.
 
-First, run the development server:
+Bringing ancient healing to the digital age.
+
+![License](https://img.shields.io/github/license/NextGenGk/Ayursutra-Panchkarma-Landing-Page)
+![GitHub stars](https://img.shields.io/github/stars/NextGenGk/Ayursutra-Panchkarma-Landing-Page?style=social)
+![GitHub forks](https://img.shields.io/github/forks/NextGenGk/Ayursutra-Panchkarma-Landing-Page?style=social)
+![GitHub issues](https://img.shields.io/github/issues/NextGenGk/Ayursutra-Panchkarma-Landing-Page)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/NextGenGk/Ayursutra-Panchkarma-Landing-Page)
+![GitHub last commit](https://img.shields.io/github/last-commit/NextGenGk/Ayursutra-Panchkarma-Landing-Page)
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/next.js-%23000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Node.js](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
+
+## About
+
+This project is a landing page designed to promote Ayursutra Panchkarma treatments. It's built using Next.js, a React framework that enables server-side rendering and static site generation, and TypeScript, which adds static typing to JavaScript for improved code maintainability and developer experience.
+
+The landing page aims to provide potential clients with information about Panchkarma, its benefits, and the services offered by Ayursutra. It targets individuals interested in holistic wellness and alternative medicine.
+
+The key technologies used include Next.js for its performance and SEO benefits, TypeScript for type safety, and potentially a UI library like Tailwind CSS or Material UI for styling. The architecture follows a component-based approach, making it easy to add new sections and features. The unique selling point is its focus on presenting traditional Ayurvedic treatments in a modern and engaging way.
+
+## ✨ Features
+
+- 🎯 **Informative Content**: Detailed descriptions of Panchkarma treatments and their benefits.
+- ⚡ **Performance**: Optimized for speed and SEO using Next.js.
+- 🎨 **UI/UX**: Modern and responsive design for a seamless user experience.
+- 📱 **Responsive**: Compatible with various devices and screen sizes.
+- 🛠️ **Extensible**: Easy to add new sections and features.
+
+## 🚀 Quick Start
+
+Clone and run in 3 steps:
 
 ```bash
+git clone https://github.com/NextGenGk/Ayursutra-Panchkarma-Landing-Page.git
+cd Ayursutra-Panchkarma-Landing-Page
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18+ and npm
+- Git
 
-## Learn More
+### From Source
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Clone repository
+git clone https://github.com/NextGenGk/Ayursutra-Panchkarma-Landing-Page.git
+cd Ayursutra-Panchkarma-Landing-Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Install dependencies
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start development server
+npm run dev
+```
 
-## Deploy on Vercel
+### Development Setup
+```bash
+# Fork and clone the repo
+git clone https://github.com/yourusername/Ayursutra-Panchkarma-Landing-Page.git
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Install dependencies
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Create a new branch
+git checkout -b feature/your-feature-name
+
+# Make your changes and test
+npm run dev
+
+# Commit and push
+git commit -m "Description of changes"
+git push origin feature/your-feature-name
+```
