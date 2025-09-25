@@ -78,10 +78,10 @@ const WaitlistSection = () => {
     },
     {
       question: "About AyurSutra",
-      answer: "AyurSutra is revolutionizing Panchakarma patient management by combining modern technology with ancient Ayurvedic wisdom. Learn more about our vision and team at ",
+      answer: "AyurSutra is revolutionizing Panchakarma patient management by combining modern technology with ancient Ayurvedic wisdom. Learn more about our vision and team at",
       link: {
         url: "https://foyer-poster-75653596.figma.site/",
-        text: "our Figma site"
+        text: "Our Website"
       }
     }
   ];
@@ -147,7 +147,7 @@ const WaitlistSection = () => {
                       href={faq.link.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-primary hover:underline ml-1"
+                      className="text-blue-500 hover:text-blue-400 hover:underline ml-1 transition-colors duration-200"
                     >
                       {faq.link.text}
                     </a>
