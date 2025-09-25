@@ -112,24 +112,23 @@ export default function HeroSectionOne() {
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
-        <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-5xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
-          {"AyurSutra - Panchakarma AI Powered Patient Management System"
-            .split(" ")
-            .map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
-                className="mr-2 inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
+        <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 md:px-0">
+          <motion.span
+            initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+            animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.3, delay: 0, ease: "easeInOut" }}
+            className="block text-6xl sm:text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent mb-3 leading-tight md:leading-[1.5]"
+          >
+            AyurSutra
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+            animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }}
+            className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground/80 tracking-tight mb-2"
+          >
+            Panchakarma AI Powered Patient Management System
+          </motion.span>
         </h1>
         <motion.p
           initial={{
@@ -144,7 +143,7 @@ export default function HeroSectionOne() {
           }}
           className="relative z-10 mx-auto max-w-2xl px-4 py-6 text-center text-xl font-medium text-foreground/80 sm:px-6 md:px-0 md:text-2xl"
         >
-          Automate therapy scheduling, ensure consistent care, and simplify patient management -trusted by Ayurveda centers worldwide.
+          Harness AI to automate patient management, daily tasks, and therapy scheduling—secure, DPDP-compliant, so you can focus on care, not paper work.
         </motion.p>
         <motion.div
           initial={{
