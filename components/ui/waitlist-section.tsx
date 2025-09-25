@@ -50,19 +50,39 @@ const WaitlistSection = () => {
     },
     {
       question: "I joined the waitlist. When will I hear back?",
-      answer: "We'll be sending out invitations on a rolling basis. You'll receive an email as soon as your spot in line comes up, typically within 1-2 weeks."
+      answer: "We'll be sending out invitations on a rolling basis. You'll receive an email as soon as your spot in line comes up, typically within 5-6 months."
     },
     {
-      question: "How can I increase my chances of getting access?",
+      question: "How can I increase my chances of getting early access?",
       answer: "We prioritize early signups and healthcare professionals. Sharing about us on social media can also help move you up the list!"
     },
     {
-      question: "I already installed and signed up for AyurSutra. Can I continue using it?",
-      answer: "Yes! Existing users will continue to have full access. The waitlist is only for new users joining our platform."
+      question: "What features does AyurSutra offer?",
+      answer: "AyurSutra provides comprehensive Panchakarma patient management including appointment scheduling, treatment tracking, patient history, and personalized care plans - all integrated with traditional Ayurvedic principles."
     },
     {
-      question: "I keep getting retry errors or am experiencing slowness, what can I do?",
-      answer: "We apologize for the inconvenience. Please try refreshing your browser or clearing your cache. If issues persist, contact our support team at support@ayursutra.com"
+      question: "Is there a mobile app available?",
+      answer: "Yes! AyurSutra will be available on both iOS and Android platforms. You'll receive download instructions when you get access to the platform."
+    },
+    {
+      question: "How much does AyurSutra cost?",
+      answer: "We offer flexible pricing plans based on practice size and needs. Early access users will receive special introductory pricing. Complete pricing details will be shared when you're invited to join."
+    },
+    {
+      question: "Can I use AyurSutra for multiple locations?",
+      answer: "Absolutely! Our platform supports multi-location management, making it easy to oversee multiple clinics or centers from a single dashboard."
+    },
+    {
+      question: "Is my data secure with AyurSutra?",
+      answer: "Data security is our top priority. We use industry-standard encryption and follow best practices to ensure all your information remains private and protected within the app."
+    },
+    {
+      question: "About AyurSutra",
+      answer: "AyurSutra is revolutionizing Panchakarma patient management by combining modern technology with ancient Ayurvedic wisdom. Learn more about our vision and team at ",
+      link: {
+        url: "https://foyer-poster-75653596.figma.site/",
+        text: "our Figma site"
+      }
     }
   ];
 
@@ -120,7 +140,19 @@ const WaitlistSection = () => {
                 }}
                 aria-hidden={openFaqIndex !== index}
               >
-                <p className="text-foreground/80 text-sm">{faq.answer}</p>
+                <p className="text-foreground/80 text-sm">
+                  {faq.answer}
+                  {faq.link && (
+                    <a 
+                      href={faq.link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline ml-1"
+                    >
+                      {faq.link.text}
+                    </a>
+                  )}
+                </p>
               </div>
             </div>
           ))}
