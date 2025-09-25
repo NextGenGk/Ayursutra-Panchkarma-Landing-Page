@@ -36,7 +36,7 @@ const WaitlistSection = () => {
 
   return (
     <div className="relative w-full overflow-hidden bg-neutral-950 py-20">
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-2xl px-6 text-center sm:px-8">
         <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl">
           Join the Waitlist
         </h2>
@@ -59,7 +59,7 @@ const WaitlistSection = () => {
         </div>
       </div>
 
-      <div id="faq" className="mx-auto mt-16 max-w-3xl scroll-mt-20">
+      <div id="faq" className="mx-auto mt-16 max-w-3xl scroll-mt-20 px-6 sm:px-8">
         <h3 className="text-center text-2xl font-semibold text-white">Common questions</h3>
         <div className="mt-6 space-y-3">
           {faqs.map((faq, index) => (

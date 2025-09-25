@@ -112,7 +112,7 @@ export default function HeroSectionOne() {
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
-        <h1 className="relative z-10 mx-auto max-w-4xl px-4 text-center text-2xl font-bold text-slate-700 sm:px-6 md:px-0 md:text-4xl lg:text-7xl dark:text-slate-300">
+        <h1 className="relative z-10 mx-auto max-w-4xl px-4 text-center text-3xl font-bold text-slate-700 sm:px-6 sm:text-4xl md:px-0 md:text-5xl lg:text-7xl dark:text-slate-300">
           {"Smarter Panchakarma, Better Patient Care"
             .split(" ")
             .map((word, index) => (
