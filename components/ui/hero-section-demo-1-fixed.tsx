@@ -113,7 +113,7 @@ export default function HeroSectionOne() {
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
         <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-4xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
-          {"AyurSutra- Panchakarma Patient Management, Therapy Scheduling, and AI-Driven Diet System Software"
+          {"AYURSUTRA - Panchakarma Patient Management and Therapy Scheduling Software"
             .split(" ")
             .map((word, index) => (
               <motion.span
