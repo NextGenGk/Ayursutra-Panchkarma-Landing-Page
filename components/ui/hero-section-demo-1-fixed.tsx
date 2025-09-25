@@ -112,8 +112,8 @@ export default function HeroSectionOne() {
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
-        <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-4xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
-          {"AyurSutra - Panchakarma Patient Management and Therapy Scheduling Software"
+        <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-5xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
+          {"AyurSutra - Panchakarma AI Powered Patient Management System"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -142,7 +142,7 @@ export default function HeroSectionOne() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-xl px-4 py-4 text-center text-lg font-normal text-foreground/70 sm:px-6 md:px-0"
+          className="relative z-10 mx-auto max-w-2xl px-4 py-6 text-center text-xl font-medium text-foreground/80 sm:px-6 md:px-0 md:text-2xl"
         >
           Automate therapy scheduling, ensure consistent care, and simplify patient management -trusted by Ayurveda centers worldwide.
         </motion.p>
