@@ -74,7 +74,7 @@ const WaitlistSection = () => {
     },
     {
       question: "Is my data secure with AyurSutra?",
-      answer: "Data security is our top priority. We use industry-standard encryption and follow best practices to ensure all your information remains private and protected within the app."
+      answer: "Data security is our top priority. We are fully compliant with the Digital Personal Data Protection (DPDP) Act 2023 and implement FHIR (Fast Healthcare Interoperability Resources) standards for healthcare data. Your information is protected with end-to-end encryption, regular security audits, and strict access controls to ensure maximum privacy and security."
     },
     {
       question: "About AyurSutra",

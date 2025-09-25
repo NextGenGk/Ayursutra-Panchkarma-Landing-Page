@@ -113,7 +113,7 @@ export default function HeroSectionOne() {
       </div>
       <div className="w-full px-6 py-20 sm:px-8 md:py-28">
         <h1 className="relative z-10 mx-auto max-w-5xl px-4 text-center text-4xl font-bold text-foreground/90 sm:px-6 sm:text-5xl md:px-0 md:text-6xl lg:text-6xl">
-          {"Smarter Panchakarma, Better Patient Care"
+          {"AyurSutra Primary Research Survey"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -186,12 +186,12 @@ export default function HeroSectionOne() {
           transition={{
             delay: 1.2,
           }}
-          className="relative z-10 mt-24 w-full max-w-7xl mx-auto rounded-[1.75rem] border-2 border-neutral-200 bg-neutral-100 p-6 shadow-2xl dark:border-neutral-800 dark:bg-neutral-900"
+          className="relative z-10 mt-12 w-full max-w-7xl mx-auto rounded-xl sm:rounded-[1.75rem] border-2 border-neutral-200 bg-neutral-100 p-2 sm:p-6 shadow-2xl dark:border-neutral-800 dark:bg-neutral-900"
         >
-          <div className="w-full overflow-hidden rounded-2xl border-[3px] border-gray-300 dark:border-gray-700">
+          <div className="w-full overflow-hidden rounded-lg sm:rounded-2xl border-2 sm:border-[3px] border-gray-300 dark:border-gray-700">
             <Image
-              src="/patient-home-page-01.webp"
-              alt="Landing page preview"
+              src="/patient.png"
+              alt="Patient dashboard preview"
               className="aspect-[16/9] h-auto w-full object-cover"
               height={800}
               width={1422}
