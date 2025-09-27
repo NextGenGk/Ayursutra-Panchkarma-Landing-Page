@@ -95,17 +95,17 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/90">Legal</h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="#privacy" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+                <Link href="/privacy" className="text-sm text-foreground/80 hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#terms" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+                <Link href="/terms" className="text-sm text-foreground/80 hover:text-primary transition-colors">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="#cookies" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+                <Link href="/cookies" className="text-sm text-foreground/80 hover:text-primary transition-colors">
                   Cookie Policy
                 </Link>
               </li>
