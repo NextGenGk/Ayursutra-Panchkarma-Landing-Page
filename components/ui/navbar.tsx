@@ -29,12 +29,14 @@ export function Navbar() {
               <Link href="/faq" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
                 FAQ
               </Link>
-              <Link
-                href="/signup"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md bg-gradient-to-r from-primary to-primary-light px-4 py-2 text-sm font-medium text-white shadow-sm hover:opacity-90 transition-opacity"
               >
-                Get Started
-              </Link>
+                Join Waitlist
+              </a>
             </div>
             
             {/* Mobile menu button */}
@@ -76,13 +78,15 @@ export function Navbar() {
             >
               FAQ
             </Link>
-            <Link
-              href="/signup"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block px-3 py-2 text-base font-medium text-foreground/80 hover:bg-foreground/5 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Get Started
-            </Link>
+              Join Waitlist
+            </a>
           </div>
         </div>
       )}
