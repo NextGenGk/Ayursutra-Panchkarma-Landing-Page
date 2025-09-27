@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Footer } from "@/components/ui/footer";
 
 type LegalLayoutProps = {
   children: ReactNode;
@@ -49,7 +48,6 @@ export function LegalLayout({ children, title, lastUpdated }: LegalLayoutProps) 
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

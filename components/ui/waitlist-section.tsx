@@ -163,4 +163,4 @@ const WaitlistSection = () => {
   );
 };
 
-export default WaitlistSection;
+export { WaitlistSection };

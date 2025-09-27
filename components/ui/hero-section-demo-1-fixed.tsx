@@ -1,110 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  return (
-    <nav className="w-full border-b border-border/50 bg-card/80 backdrop-blur-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-primary-light" />
-                <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">AyurSutra</h1>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-6">
-            <div className="hidden md:block">
-              <div className="flex items-center space-x-8">
-                <Link href="/" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
-                  Home
-                </Link>
-                <a href="#faq" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
-                  FAQ
-                </a>
-              </div>
-            </div>
-
-            <div className="hidden md:inline-flex">
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-primary-light hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              >
-                Join Waitlist
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-center md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {isMenuOpen && (
-        <div className="md:hidden" id="mobile-menu">
-          <div className="space-y-1 px-2 pb-3 pt-2">
-            <Link 
-              href="/" 
-              className="block rounded-md px-3 py-2 text-base font-medium text-foreground/90 hover:bg-accent hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              href="#faq" 
-              className="block rounded-md px-3 py-2 text-base font-medium text-foreground/90 hover:bg-accent hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 block w-full rounded-md bg-primary px-3 py-2 text-center text-base font-medium text-white hover:bg-primary-light hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Join Waitlist
-            </a>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-};
-
-export default function HeroSectionOne() {
+export const HeroSectionOne = () => {
   return (
     <div className="relative w-full flex flex-col items-center justify-center">
-      <Navbar />
       <div className="absolute inset-y-0 left-0 h-full w-px bg-border/50">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
