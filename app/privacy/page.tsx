@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
               <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
               <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party.</li>
               <li><strong>Application</strong> refers to AyurSutra, the software program provided by the Company.</li>
-              <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to The Blue Boon, Durg, Chhattishgarg (C.G), 491001.</li>
+              <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to The Blue Boon, Durg, Chhattishgarg (C.G), 491001.</li>
               <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
               <li><strong>Country</strong> refers to: Chhattisgarh, India</li>
               <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
             <div className="space-y-2">
               <h4 className="text-lg font-medium text-foreground/85">Usage Data</h4>
               <p className="text-foreground/80">
-                Usage Data is collected automatically when using the Service. This may include information such as Your Device's Internet Protocol address (e.g. IP address), 
+                Usage Data is collected automatically when using the Service. This may include information such as Your Device&apos;s Internet Protocol address (e.g. IP address), 
                 browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, 
                 unique device identifiers and other diagnostic data.
               </p>
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
         {/* Additional Privacy Sections */}
         <section className="space-y-6">
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-foreground">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold text-foreground">Children&apos;s Privacy</h2>
             <p className="text-foreground/80">
               Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable 
               information from anyone under the age of 13.
