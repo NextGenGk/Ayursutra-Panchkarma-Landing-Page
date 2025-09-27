@@ -26,9 +26,9 @@ export function Navbar() {
               <Link href="/" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
                 Home
               </Link>
-              <a href="#faq" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
+              <Link href="/faq" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
                 FAQ
-              </a>
+              </Link>
               <Link
                 href="/signup"
                 className="inline-flex items-center rounded-md bg-gradient-to-r from-primary to-primary-light px-4 py-2 text-sm font-medium text-white shadow-sm hover:opacity-90 transition-opacity"
@@ -69,13 +69,13 @@ export function Navbar() {
             >
               Home
             </Link>
-            <a
-              href="#faq"
+            <Link
+              href="/faq"
               className="block px-3 py-2 text-base font-medium text-foreground/80 hover:bg-foreground/5 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
-            </a>
+            </Link>
             <Link
               href="/signup"
               className="block px-3 py-2 text-base font-medium text-foreground/80 hover:bg-foreground/5 rounded-md"
