@@ -19,28 +19,11 @@ const WaitlistSection = () => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
-  // Function to handle the waitlist button click with debugging
+  // Function to handle the waitlist button click
   const handleWaitlistClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log("Waitlist button clicked");
-    console.log("URL:", waitlistUrl);
-    
-    try {
-      // Open the Google Form in a new window/tab
-      const newWindow = window.open(waitlistUrl, '_blank', 'noopener,noreferrer');
-      
-      if (!newWindow) {
-        // Popup was blocked, try alternative method
-        console.log("Popup blocked, trying alternative method");
-        window.location.href = waitlistUrl;
-      } else {
-        console.log("Form opened successfully");
-      }
-    } catch (error) {
-      console.error("Error opening form:", error);
-      // Fallback: navigate to the form in the same window
-      window.location.href = waitlistUrl;
-    }
+    // Open the Google Form in a new tab
+    window.open(waitlistUrl, '_blank', 'noopener,noreferrer');
   };
 
   const faqs = [
