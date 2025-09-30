@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 // Mock BackgroundBeams component since it's not available
 const BackgroundBeams = ({ className }: { className?: string }) => (
@@ -12,19 +13,13 @@ const BackgroundBeams = ({ className }: { className?: string }) => (
 const WaitlistSection = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
-  // Updated Google Forms URL - replace this with your actual form URL
-  const waitlistUrl = "https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform";
+
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
-  // Function to handle the waitlist button click
-  const handleWaitlistClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    // Open the Google Form in a new tab
-    window.open(waitlistUrl, '_blank', 'noopener,noreferrer');
-  };
+
 
   const faqs = [
     {
@@ -80,15 +75,15 @@ const WaitlistSection = () => {
         </p>
         
         <div className="mt-8">
-          <button
-            onClick={handleWaitlistClick}
+          <Link
+            href="/waitlist"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 font-medium text-white transition-all hover:bg-primary-light hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background cursor-pointer transform hover:-translate-y-0.5"
           >
             Join Waitlist
             <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </Link>
 
         </div>
       </div>

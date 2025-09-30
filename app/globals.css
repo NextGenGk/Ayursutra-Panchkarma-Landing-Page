@@ -11,6 +11,25 @@
   --text: #344e41;
   --card: #ffffff;
   --border: #d4d4d4;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+
+  /* Chart Colors */
+  --chart-1: #3a5a40;
+  --chart-2: #588157;
+  --chart-3: #a3b18a;
+  --chart-4: #dad7cd;
+  --chart-5: #344e41;
+
+  /* Sidebar Variables */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2c3e29;
+  --sidebar-primary: #3a5a40;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f5f0;
+  --sidebar-accent-foreground: #2c3e29;
+  --sidebar-border: #d4d4d4;
+  --sidebar-ring: #588157;
 }
 
 [data-theme="dark"] {
@@ -23,6 +42,25 @@
   --text: #f8f5f0;
   --card: #1e3b2a;
   --border: #3a5a40;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+
+  /* Chart Colors - Dark */
+  --chart-1: #588157;
+  --chart-2: #a3b18a;
+  --chart-3: #3a5a40;
+  --chart-4: #dad7cd;
+  --chart-5: #344e41;
+
+  /* Sidebar Variables - Dark */
+  --sidebar: #1e3b2a;
+  --sidebar-foreground: #f0f0e6;
+  --sidebar-primary: #588157;
+  --sidebar-primary-foreground: #1a2e1f;
+  --sidebar-accent: #344e41;
+  --sidebar-accent-foreground: #f0f0e6;
+  --sidebar-border: #3a5a40;
+  --sidebar-ring: #588157;
 }
 
 @theme inline {
@@ -35,6 +73,13 @@
   --color-text: var(--text);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -62,4 +107,164 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-light);
+}
+
+/* Sidebar Styles */
+[data-sidebar="sidebar"] {
+  --sidebar-width: 16rem;
+  --sidebar-width-mobile: 18rem;
+}
+
+/* Sidebar custom scrollbar */
+[data-sidebar="content"] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-border) transparent;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb {
+  background: var(--sidebar-border);
+  border-radius: 3px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb:hover {
+  background: var(--sidebar-ring);
+}
+
+/* Sidebar menu button improvements - smaller width */
+[data-sidebar="menu-button"] {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.5rem !important;
+  margin: 0.125rem 0;
+  min-height: 2rem;
+  font-size: 0.875rem;
+}
+
+/* Ensure proper text spacing in sidebar */
+[data-sidebar="sidebar"] [data-sidebar="menu-button"] {
+  padding: 0.375rem 0.5rem !important;
+  margin: 0.125rem 0;
+}
+
+/* Fix sidebar text spacing - compact */
+[data-sidebar="menu-button"] > * {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+/* Make sidebar icons smaller */
+[data-sidebar="menu-button"] svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  flex-shrink: 0;
+}
+
+/* Compact sidebar text */
+[data-sidebar="menu-button"] span {
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+/* Dashboard Header Improvements */
+header {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Sidebar trigger button styling */
+[data-sidebar="trigger"] {
+  transition: all 0.2s ease-in-out;
+}
+
+[data-sidebar="trigger"]:hover {
+  background-color: hsl(var(--accent));
+  transform: scale(1.05);
+}
+
+/* Header responsive improvements */
+@media (max-width: 640px) {
+  header .hidden {
+    display: none !important;
+  }
+  
+  header h1 {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Fix active state visibility */
+[data-sidebar="menu-button"][data-active="true"] {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+  font-weight: 500;
+}
+
+/* Dashboard content width constraints - applies to ALL dashboard pages */
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ensure sidebar wrapper stays full width */
+.group\/sidebar-wrapper,
+[class*="group/sidebar-wrapper"] {
+  width: 100% !important;
+  min-height: 100svh !important;
+  display: flex !important;
+}
+
+/* Ensure sidebar provider container is full width */
+[data-sidebar] {
+  width: 100% !important;
+}
+
+/* Force sidebar inset to center content */
+[data-sidebar="inset"] {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Constrain main content width for ALL dashboard pages */
+[data-sidebar="inset"] main {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Ensure all dashboard page content is constrained */
+[data-sidebar="inset"] main > * {
+  max-width: 100% !important;
+}
+
+/* Responsive dashboard layout */
+@media (min-width: 1280px) {
+  [data-sidebar="inset"] main {
+    max-width: 1300px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  [data-sidebar="inset"] main {
+    max-width: 1100px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  [data-sidebar="inset"] main {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }

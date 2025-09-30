@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import Link from "next/link";
 
 export const HeroSectionOne = () => {
   return (
@@ -58,22 +60,24 @@ export const HeroSectionOne = () => {
             duration: 0.3,
             delay: 1,
           }}
-          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="relative z-10 mt-8 flex items-center justify-center"
         >
-          <a 
-            href="https://docs.google.com/forms/d/e/1FAIpQLScaJqZUDR1F-sHXeBi6pjeZqXu_gzPxB-xjdgmKjVBTa1FFDQ/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-60 transform rounded-lg bg-primary px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-light hover:shadow-lg text-center"
-          >
-            Join Waitlist
-          </a>
-          <a 
-            href="#faq"
-            className="w-60 transform rounded-lg border-2 border-primary/20 bg-transparent px-6 py-2 font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm dark:text-primary-light dark:hover:bg-primary/10 text-center"
-          >
-            Read FAQs
-          </a>
+          <SignedOut>
+            <Link 
+              href="/sign-up"
+              className="w-60 transform rounded-lg bg-gradient-to-r from-primary to-primary-light px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-center"
+            >
+              Get Started
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <Link 
+              href="/dashboard"
+              className="w-60 transform rounded-lg bg-gradient-to-r from-primary to-primary-light px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-center"
+            >
+              Dashboard
+            </Link>
+          </SignedIn>
         </motion.div>
         <motion.div
           initial={{
