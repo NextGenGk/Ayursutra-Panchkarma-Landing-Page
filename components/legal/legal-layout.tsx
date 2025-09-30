@@ -8,9 +8,8 @@ type LegalLayoutProps = {
 
 export function LegalLayout({ children, title, lastUpdated }: LegalLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <main className="flex-1">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
+    <div className="bg-background">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
               {title}
@@ -47,7 +46,6 @@ export function LegalLayout({ children, title, lastUpdated }: LegalLayoutProps) 
             </ul>
           </div>
         </div>
-      </main>
     </div>
   );
 }

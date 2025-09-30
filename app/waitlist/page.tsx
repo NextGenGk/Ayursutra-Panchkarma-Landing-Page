@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function WaitlistPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           {/* Header Section */}
