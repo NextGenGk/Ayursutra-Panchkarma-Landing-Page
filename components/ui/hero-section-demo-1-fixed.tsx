@@ -67,7 +67,7 @@ export const HeroSectionOne = () => {
               href="/sign-up"
               className="w-60 transform rounded-lg bg-gradient-to-r from-primary to-primary-light px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-center"
             >
-              Get Started
+              Get Admin Console
             </Link>
           </SignedOut>
           <SignedIn>
@@ -75,7 +75,7 @@ export const HeroSectionOne = () => {
               href="/dashboard"
               className="w-60 transform rounded-lg bg-gradient-to-r from-primary to-primary-light px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-center"
             >
-              Dashboard
+              Admin Dashboard
             </Link>
           </SignedIn>
         </motion.div>
