@@ -1,7 +1,11 @@
 import { Calendar, Clock, User, MapPin, Phone, Plus } from "lucide-react"
 
-export default function AppointmentsPage() {
-  const appointments = [
+import { getAllAppointments } from "@/app/actions/appointment"
+
+export default async function AppointmentsPage() {
+  const { data: dbAppointments } = await getAllAppointments()
+
+  const demoAppointments = [
     {
       id: 1,
       patient: "John Doe",
@@ -10,7 +14,8 @@ export default function AppointmentsPage() {
       date: "2024-01-15",
       type: "Consultation",
       status: "Confirmed",
-      location: "Room 101"
+      location: "Room 101",
+      image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=64&h=64&fit=crop&crop=faces"
     },
     {
       id: 2,
@@ -20,7 +25,8 @@ export default function AppointmentsPage() {
       date: "2024-01-15",
       type: "Follow-up",
       status: "Pending",
-      location: "Room 203"
+      location: "Room 203",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=faces"
     },
     {
       id: 3,
@@ -30,7 +36,8 @@ export default function AppointmentsPage() {
       date: "2024-01-15",
       type: "Treatment",
       status: "In Progress",
-      location: "Treatment Room A"
+      location: "Treatment Room A",
+      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=64&h=64&fit=crop&crop=faces"
     },
     {
       id: 4,
@@ -40,9 +47,35 @@ export default function AppointmentsPage() {
       date: "2024-01-16",
       type: "Consultation",
       status: "Scheduled",
-      location: "Room 105"
+      location: "Room 105",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&h=64&fit=crop&crop=faces"
     }
   ]
+
+  interface DBAppointment {
+    aid: number;
+    pid: string;
+    did: string;
+    scheduled_time: string;
+    scheduled_date: string;
+    mode: string;
+    status: string;
+  }
+
+  const mappedRealAppointments = dbAppointments?.map((apt: DBAppointment) => ({
+    id: apt.aid,
+    patient: `Patient ${apt.pid?.slice(0, 4)}...`, // Placeholder until we have joins
+    doctor: `Dr. ${apt.did?.slice(0, 4)}...`, // Placeholder until we have joins
+    time: apt.scheduled_time?.slice(0, 5) || "00:00",
+    date: apt.scheduled_date,
+    type: apt.mode === 'online' ? 'Online Consultation' : 'In-Person Visit',
+    status: apt.status.charAt(0).toUpperCase() + apt.status.slice(1),
+    location: apt.mode === 'online' ? 'Video Call' : 'Clinic',
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=64&h=64&fit=crop&crop=faces" // Generic placeholder
+  })) || []
+
+  // Combine real appointments with demo appointments (prioritizing real ones)
+  const appointments = [...mappedRealAppointments, ...demoAppointments]
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -132,6 +165,11 @@ export default function AppointmentsPage() {
                       {new Date(appointment.date).toLocaleDateString('en-US', { month: 'short' })}
                     </span>
                   </div>
+                  <img 
+                    src={appointment.image} 
+                    alt={appointment.patient} 
+                    className="h-12 w-12 rounded-full object-cover border border-border"
+                  />
                   <div>
                     <h4 className="font-semibold">{appointment.patient}</h4>
                     <p className="text-sm text-muted-foreground">with {appointment.doctor}</p>

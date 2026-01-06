@@ -33,10 +33,10 @@ export default function AdminPage() {
   ]
 
   const recentUsers = [
-    { name: "Dr. Sarah Wilson", role: "Doctor", status: "Active", joinDate: "2024-01-15" },
-    { name: "John Patient", role: "Patient", status: "Active", joinDate: "2024-01-14" },
-    { name: "Mike Monitor", role: "Monitoring", status: "Pending", joinDate: "2024-01-13" },
-    { name: "Dr. James Brown", role: "Doctor", status: "Active", joinDate: "2024-01-12" },
+    { name: "Dr. Sarah Wilson", role: "Doctor", status: "Active", joinDate: "2024-01-15", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
+    { name: "John Patient", role: "Patient", status: "Active", joinDate: "2024-01-14", image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Mike Monitor", role: "Monitoring", status: "Pending", joinDate: "2024-01-13", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Dr. James Brown", role: "Doctor", status: "Active", joinDate: "2024-01-12", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=64&h=64&fit=crop&crop=faces" },
   ]
 
   return (
@@ -82,9 +82,16 @@ export default function AdminPage() {
           <div className="space-y-3">
             {recentUsers.map((user, index) => (
               <div key={index} className="flex items-center justify-between p-3 border rounded-md">
-                <div>
-                  <p className="font-medium">{user.name}</p>
-                  <p className="text-sm text-muted-foreground">{user.role} • {user.joinDate}</p>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={user.image} 
+                    alt={user.name} 
+                    className="h-8 w-8 rounded-full object-cover border border-border"
+                  />
+                  <div>
+                    <p className="font-medium">{user.name}</p>
+                    <p className="text-sm text-muted-foreground">{user.role} • {user.joinDate}</p>
+                  </div>
                 </div>
                 <span className={`text-xs px-2 py-1 rounded ${
                   user.status === 'Active' 

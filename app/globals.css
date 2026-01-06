@@ -13,6 +13,12 @@
   --border: #d4d4d4;
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
+  --primary-foreground: #ffffff;
+  --secondary-foreground: #2c3e29;
+  --accent-foreground: #2c3e29;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --ring: #3a5a40;
 
   /* Chart Colors */
   --chart-1: #3a5a40;
@@ -44,6 +50,12 @@
   --border: #3a5a40;
   --muted: #374151;
   --muted-foreground: #9ca3af;
+  --primary-foreground: #ffffff;
+  --secondary-foreground: #1a2e1f;
+  --accent-foreground: #ffffff;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #ffffff;
+  --ring: #588157;
 
   /* Chart Colors - Dark */
   --chart-1: #588157;
@@ -75,6 +87,12 @@
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -87,7 +105,7 @@
 body {
   background: var(--background);
   color: var(--text);
-  font-family: 'Poppins', 'Arial', sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -197,7 +215,7 @@ header {
   header .hidden {
     display: none !important;
   }
-  
+
   header h1 {
     font-size: 0.875rem !important;
   }

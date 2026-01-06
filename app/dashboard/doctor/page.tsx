@@ -59,18 +59,18 @@ export default function DoctorPage() {
   ]
 
   const todayAppointments = [
-    { time: "09:00", patient: "John Doe", type: "Consultation", status: "Completed" },
-    { time: "09:30", patient: "Jane Smith", type: "Follow-up", status: "In Progress" },
-    { time: "10:00", patient: "Mike Johnson", type: "Treatment", status: "Scheduled" },
-    { time: "10:30", patient: "Sarah Wilson", type: "Consultation", status: "Scheduled" },
-    { time: "11:00", patient: "David Brown", type: "Check-up", status: "Scheduled" },
+    { time: "09:00", patient: "John Doe", type: "Consultation", status: "Completed", image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=64&h=64&fit=crop&crop=faces" },
+    { time: "09:30", patient: "Jane Smith", type: "Follow-up", status: "In Progress", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=faces" },
+    { time: "10:00", patient: "Mike Johnson", type: "Treatment", status: "Scheduled", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=64&h=64&fit=crop&crop=faces" },
+    { time: "10:30", patient: "Sarah Wilson", type: "Consultation", status: "Scheduled", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
+    { time: "11:00", patient: "David Brown", type: "Check-up", status: "Scheduled", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=faces" },
   ]
 
   const recentPatients = [
-    { name: "Alice Cooper", lastVisit: "2024-01-15", condition: "Arthritis", status: "Stable" },
-    { name: "Bob Martin", lastVisit: "2024-01-14", condition: "Hypertension", status: "Improving" },
-    { name: "Carol Davis", lastVisit: "2024-01-13", condition: "Diabetes", status: "Monitoring" },
-    { name: "Daniel Lee", lastVisit: "2024-01-12", condition: "Back Pain", status: "Treatment" },
+    { name: "Alice Cooper", lastVisit: "2024-01-15", condition: "Arthritis", status: "Stable", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Bob Martin", lastVisit: "2024-01-14", condition: "Hypertension", status: "Improving", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Carol Davis", lastVisit: "2024-01-13", condition: "Diabetes", status: "Monitoring", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Daniel Lee", lastVisit: "2024-01-12", condition: "Back Pain", status: "Treatment", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&h=64&fit=crop&crop=faces" },
   ]
 
   return (
@@ -115,6 +115,11 @@ export default function DoctorPage() {
               <div key={index} className="flex items-center justify-between p-3 border rounded-md">
                 <div className="flex items-center space-x-3">
                   <div className="text-sm font-mono font-medium">{appointment.time}</div>
+                  <img 
+                    src={appointment.image} 
+                    alt={appointment.patient} 
+                    className="h-8 w-8 rounded-full object-cover border border-border"
+                  />
                   <div>
                     <p className="font-medium">{appointment.patient}</p>
                     <p className="text-sm text-muted-foreground">{appointment.type}</p>
@@ -143,10 +148,17 @@ export default function DoctorPage() {
           <div className="space-y-3">
             {recentPatients.map((patient, index) => (
               <div key={index} className="flex items-center justify-between p-3 border rounded-md">
-                <div>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={patient.image} 
+                    alt={patient.name} 
+                    className="h-8 w-8 rounded-full object-cover border border-border"
+                  />
+                  <div>
                   <p className="font-medium">{patient.name}</p>
                   <p className="text-sm text-muted-foreground">{patient.condition} • {patient.lastVisit}</p>
                 </div>
+              </div>
                 <span className={`text-xs px-2 py-1 rounded ${
                   patient.status === 'Stable' 
                     ? 'bg-green-100 text-green-800'

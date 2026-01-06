@@ -100,27 +100,48 @@ export default async function DashboardPage() {
           <h3 className="text-lg font-semibold mb-4">Recent Appointments</h3>
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <div>
-                <p className="font-medium">John Doe</p>
-                <p className="text-sm text-muted-foreground">Consultation - 10:00 AM</p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=64&h=64&fit=crop&crop=faces" 
+                  alt="John Doe" 
+                  className="h-10 w-10 rounded-full object-cover border border-border"
+                />
+                <div>
+                  <p className="font-medium">John Doe</p>
+                  <p className="text-sm text-muted-foreground">Consultation - 10:00 AM</p>
+                </div>
               </div>
               <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
                 Confirmed
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <div>
-                <p className="font-medium">Jane Smith</p>
-                <p className="text-sm text-muted-foreground">Follow-up - 2:30 PM</p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=faces" 
+                  alt="Jane Smith" 
+                  className="h-10 w-10 rounded-full object-cover border border-border"
+                />
+                <div>
+                  <p className="font-medium">Jane Smith</p>
+                  <p className="text-sm text-muted-foreground">Follow-up - 2:30 PM</p>
+                </div>
               </div>
               <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
                 Pending
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <div>
-                <p className="font-medium">Mike Johnson</p>
-                <p className="text-sm text-muted-foreground">Treatment - 4:00 PM</p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=64&h=64&fit=crop&crop=faces" 
+                  alt="Mike Johnson" 
+                  className="h-10 w-10 rounded-full object-cover border border-border"
+                />
+                <div>
+                  <p className="font-medium">Mike Johnson</p>
+                  <p className="text-sm text-muted-foreground">Treatment - 4:00 PM</p>
+                </div>
               </div>
               <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
                 In Progress

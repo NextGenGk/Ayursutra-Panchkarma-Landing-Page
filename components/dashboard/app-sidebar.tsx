@@ -47,13 +47,13 @@ const menuItems = [
   },
   {
     title: "Doctor Portal",
-    url: "/dashboard/doctor",
+    url: "https://ayursutra-docter-portal.vercel.app/",
     icon: Stethoscope,
     roles: ["admin", "doctor"],
   },
   {
     title: "Patient Portal",
-    url: "/dashboard/patient",
+    url: "https://ayursutra-patient-portal.vercel.app/",
     icon: UserCheck,
     roles: ["admin", "doctor", "patient"],
   },

@@ -1,13 +1,19 @@
-import { currentUser } from "@clerk/nextjs/server"
-import { redirect } from "next/navigation"
-import Link from "next/link"
-import { ArrowRight, Users, Stethoscope, UserCheck, Activity } from "lucide-react"
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Users,
+  Stethoscope,
+  UserCheck,
+  Activity,
+} from "lucide-react";
 
 export default async function WelcomePage() {
-  const user = await currentUser()
-  
+  const user = await currentUser();
+
   if (!user) {
-    redirect("/sign-in")
+    redirect("/sign-in");
   }
 
   const features = [
@@ -15,27 +21,27 @@ export default async function WelcomePage() {
       icon: Users,
       title: "Admin Panel",
       description: "Manage users, system settings, and monitor platform health",
-      href: "/dashboard/admin"
+      href: "/dashboard/admin",
     },
     {
       icon: Stethoscope,
       title: "Doctor Portal",
       description: "Manage patients, appointments, and medical records",
-      href: "/dashboard/doctor"
+      href: "https://ayursutra-docter-portal.vercel.app/",
     },
     {
       icon: UserCheck,
       title: "Patient Portal",
       description: "Track health journey and manage personal care",
-      href: "/dashboard/patient"
+      href: "https://ayursutra-patient-portal.vercel.app/",
     },
     {
       icon: Activity,
       title: "System Monitoring",
       description: "Monitor system health, performance, and security alerts",
-      href: "/dashboard/monitoring"
-    }
-  ]
+      href: "/dashboard/monitoring",
+    },
+  ];
 
   return (
     <div className="bg-background">
@@ -45,14 +51,14 @@ export default async function WelcomePage() {
             Welcome to AyurSutra, {user.firstName}!
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Your comprehensive Ayurvedic practice management platform is ready. 
+            Your comprehensive Ayurvedic practice management platform is ready.
             Choose your role to get started with the features designed for you.
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {features.map((feature) => {
-            const Icon = feature.icon
+            const Icon = feature.icon;
             return (
               <Link
                 key={feature.title}
@@ -74,7 +80,7 @@ export default async function WelcomePage() {
                   <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
 
@@ -89,16 +95,21 @@ export default async function WelcomePage() {
         </div>
 
         <div className="mt-16 rounded-2xl border border-border bg-card p-8">
-          <h2 className="text-xl font-semibold text-foreground mb-4">Getting Started</h2>
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            Getting Started
+          </h2>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white text-xs font-medium">
                 1
               </div>
               <div>
-                <h3 className="font-medium text-foreground">Complete Your Profile</h3>
+                <h3 className="font-medium text-foreground">
+                  Complete Your Profile
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  Add your professional information and preferences to personalize your experience.
+                  Add your professional information and preferences to
+                  personalize your experience.
                 </p>
               </div>
             </div>
@@ -107,9 +118,12 @@ export default async function WelcomePage() {
                 2
               </div>
               <div>
-                <h3 className="font-medium text-foreground">Explore the Dashboard</h3>
+                <h3 className="font-medium text-foreground">
+                  Explore the Dashboard
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  Familiarize yourself with the different sections and features available to you.
+                  Familiarize yourself with the different sections and features
+                  available to you.
                 </p>
               </div>
             </div>
@@ -120,7 +134,8 @@ export default async function WelcomePage() {
               <div>
                 <h3 className="font-medium text-foreground">Start Managing</h3>
                 <p className="text-sm text-muted-foreground">
-                  Begin adding patients, scheduling appointments, or monitoring system health.
+                  Begin adding patients, scheduling appointments, or monitoring
+                  system health.
                 </p>
               </div>
             </div>
@@ -128,5 +143,5 @@ export default async function WelcomePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

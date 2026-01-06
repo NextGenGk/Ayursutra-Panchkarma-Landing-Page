@@ -103,13 +103,13 @@ export default function DemoPage() {
             </>
           )}
           {(currentRole === "admin" || currentRole === "doctor") && (
-            <a href="/dashboard/doctor" className="p-3 border rounded-md hover:bg-accent transition-colors block">
+            <a href="https://ayursutra-docter-portal.vercel.app/" className="p-3 border rounded-md hover:bg-accent transition-colors block">
               <p className="font-medium">Doctor Portal</p>
               <p className="text-sm text-muted-foreground">Manage patients and appointments</p>
             </a>
           )}
           {(currentRole === "admin" || currentRole === "doctor" || currentRole === "patient") && (
-            <a href="/dashboard/patient" className="p-3 border rounded-md hover:bg-accent transition-colors block">
+            <a href="https://ayursutra-patient-portal.vercel.app/" className="p-3 border rounded-md hover:bg-accent transition-colors block">
               <p className="font-medium">Patient Portal</p>
               <p className="text-sm text-muted-foreground">View health information and appointments</p>
             </a>

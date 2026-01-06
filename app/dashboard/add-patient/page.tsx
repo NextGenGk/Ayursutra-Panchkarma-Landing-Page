@@ -5,7 +5,7 @@ export default function AddPatientPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-4">
-        <Link href="/dashboard/patient" className="p-2 hover:bg-accent rounded-md">
+        <Link href="https://ayursutra-patient-portal.vercel.app/" className="p-2 hover:bg-accent rounded-md">
           <ArrowLeft className="h-5 w-5" />
         </Link>
         <div>
@@ -265,7 +265,7 @@ export default function AddPatientPage() {
                 Add Patient
               </button>
               <Link 
-                href="/dashboard/patient"
+                href="https://ayursutra-patient-portal.vercel.app/"
                 className="px-6 py-2 border rounded-md hover:bg-accent transition-colors"
               >
                 Cancel

@@ -58,9 +58,9 @@ export default function PatientPage() {
   ]
 
   const upcomingAppointments = [
-    { date: "Jan 20, 2024", time: "10:00 AM", doctor: "Dr. Sarah Wilson", type: "Follow-up", status: "Confirmed" },
-    { date: "Jan 25, 2024", time: "2:30 PM", doctor: "Dr. James Brown", type: "Consultation", status: "Pending" },
-    { date: "Feb 1, 2024", time: "11:00 AM", doctor: "Dr. Sarah Wilson", type: "Treatment", status: "Scheduled" },
+    { date: "Jan 20, 2024", time: "10:00 AM", doctor: "Dr. Sarah Wilson", type: "Follow-up", status: "Confirmed", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
+    { date: "Jan 25, 2024", time: "2:30 PM", doctor: "Dr. James Brown", type: "Consultation", status: "Pending", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=64&h=64&fit=crop&crop=faces" },
+    { date: "Feb 1, 2024", time: "11:00 AM", doctor: "Dr. Sarah Wilson", type: "Treatment", status: "Scheduled", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
   ]
 
   const medications = [
@@ -71,9 +71,9 @@ export default function PatientPage() {
   ]
 
   const recentReports = [
-    { name: "Blood Test Results", date: "Jan 15, 2024", doctor: "Dr. Sarah Wilson", status: "Normal" },
-    { name: "X-Ray Report", date: "Jan 10, 2024", doctor: "Dr. James Brown", status: "Review Required" },
-    { name: "Consultation Notes", date: "Jan 5, 2024", doctor: "Dr. Sarah Wilson", status: "Available" },
+    { name: "Blood Test Results", date: "Jan 15, 2024", doctor: "Dr. Sarah Wilson", status: "Normal", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
+    { name: "X-Ray Report", date: "Jan 10, 2024", doctor: "Dr. James Brown", status: "Review Required", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=64&h=64&fit=crop&crop=faces" },
+    { name: "Consultation Notes", date: "Jan 5, 2024", doctor: "Dr. Sarah Wilson", status: "Available", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces" },
   ]
 
   return (
@@ -118,9 +118,16 @@ export default function PatientPage() {
           <div className="space-y-3">
             {upcomingAppointments.map((appointment, index) => (
               <div key={index} className="flex items-center justify-between p-3 border rounded-md">
-                <div>
-                  <p className="font-medium">{appointment.date} at {appointment.time}</p>
-                  <p className="text-sm text-muted-foreground">{appointment.doctor} • {appointment.type}</p>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={appointment.image} 
+                    alt={appointment.doctor} 
+                    className="h-8 w-8 rounded-full object-cover border border-border"
+                  />
+                  <div>
+                    <p className="font-medium">{appointment.date} at {appointment.time}</p>
+                    <p className="text-sm text-muted-foreground">{appointment.doctor} • {appointment.type}</p>
+                  </div>
                 </div>
                 <span className={`text-xs px-2 py-1 rounded ${
                   appointment.status === 'Confirmed' 
@@ -171,9 +178,16 @@ export default function PatientPage() {
         <div className="space-y-3">
           {recentReports.map((report, index) => (
             <div key={index} className="flex items-center justify-between p-3 border rounded-md">
-              <div>
-                <p className="font-medium">{report.name}</p>
-                <p className="text-sm text-muted-foreground">{report.doctor} • {report.date}</p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src={report.image} 
+                  alt={report.doctor} 
+                  className="h-8 w-8 rounded-full object-cover border border-border"
+                />
+                <div>
+                  <p className="font-medium">{report.name}</p>
+                  <p className="text-sm text-muted-foreground">{report.doctor} • {report.date}</p>
+                </div>
               </div>
               <div className="flex items-center space-x-2">
                 <span className={`text-xs px-2 py-1 rounded ${
